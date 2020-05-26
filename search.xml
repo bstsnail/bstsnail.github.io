@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Github Page配置Hexo Blog</title>
+    <url>/2020/05/26/Github-Page%E9%85%8D%E7%BD%AEHexo-Blog/</url>
+    <content><![CDATA[<ol>
+<li>安装Hexo<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure></li>
+<li>安装deploy插件<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></li>
+<li>初始化blog<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure></li>
+<li>测试hexo<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd blog</span><br><span class="line">npm install</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+浏览器中打开<a href="http://localhost:40000" target="_blank" rel="noopener">http://localhost:40000</a></li>
+<li>下载Next主题<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure></li>
+<li>配置主题<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">a. 修改 _config.xml</span><br><span class="line">  设置</span><br><span class="line">   -- title: Bstsnail&#39;s Notes</span><br><span class="line">   -- subtitle: Quite Notes</span><br><span class="line">   -- theme: next</span><br><span class="line">   -- language: zh-Hans</span><br><span class="line">   -- deploy:</span><br><span class="line">        type: git</span><br><span class="line">        repository: https:&#x2F;&#x2F;github.com&#x2F;bstsnail&#x2F;bstsnail.github.io.git</span><br><span class="line">        branch: master</span><br><span class="line">b. 修改 themes&#x2F;next&#x2F;_config.xml</span><br><span class="line">  设置</span><br><span class="line">   -- auto_excerpt:</span><br><span class="line">      enable: true</span><br><span class="line">      length: 300 (超过300个字就自动截断)</span><br><span class="line">   -- scheme: Pisces</span><br></pre></td></tr></table></figure></li>
+<li>添加搜索功能<br><br>引用于<a href="http://theme-next.iissnan.com/third-party-services.html#search-system" target="_blank" rel="noopener">搜索服务</a>的Local Search<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">a. 在站点根目录安装generator-searchdb</span><br><span class="line">   npm install hexo-generator-searchdb --save</span><br><span class="line">b. 配置站点_config.xml</span><br><span class="line">   search:</span><br><span class="line">     path: search.xml</span><br><span class="line">     field: post</span><br><span class="line">     format: html</span><br><span class="line">     limit: 10000</span><br><span class="line">c. 主题配置文件themes&#x2F;next&#x2F;_config.xml启用搜索功能</span><br><span class="line">   local_search:</span><br><span class="line">     enable: true</span><br></pre></td></tr></table></figure></li>
+<li>运行<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>setup</tag>
+      </tags>
+  </entry>
+</search>

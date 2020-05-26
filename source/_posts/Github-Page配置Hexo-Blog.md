@@ -74,8 +74,15 @@ tags: setup
    type: "tags"
    ---
    ```
-9. 运行
+9. 安装deployer
+   ```
+   npm i hexo-deployer-git
+   ```
+10. 部署到bstsnail.github.io
    ```
    hexo g
-   hexo s
+   hexo d
    ```
+   浏览器直接访问bstsnail.github.io
+11. 把源文件存放到bstsnail.github.io这个代码库的其他分支
+
